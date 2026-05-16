@@ -19,7 +19,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/).
 - [修复] 统一 Windows 桌面安装包与自动更新元数据文件名，避免 Release 中出现重复安装包并阻断 `latest.yml` 指向不存在附件。
 - [修复] 桌面端启动 WebUI 时为入口页增加 no-cache 响应头和版本化 cache-busting URL，避免安装新版后 Electron 继续复用旧 WebUI 缓存。
 - [文档] 通知分阶段治理文档已收口为 `#1311` 议题分片范围，阶段性 PR 需使用 `Refs #1311` 追踪，不得用 `Closes`/`Fixes`/`Resolves` 自动关闭 umbrella。
-- [文档] 补齐 `docs/notifications.md` 与 `docs/full-guide*.md` 中的通知能力基线、渠道能力矩阵和 PR 描述交付清单（含 `./scripts/ci_gate.sh`、`python main.py --check-notify`、`tests/test_notification_diagnostics.py` 与 `tests/test_feishu_doc.py`）。
+- [文档] 补齐 `docs/notifications.md` 与 `docs/full-guide*.md` 中的通知能力基线、渠道能力矩阵和 PR 描述交付清单（含 `backend-gate`、`./scripts/ci_gate.sh`、`python main.py --check-notify`、`tests/test_notification_diagnostics.py` 与 `tests/test_feishu_doc.py`）。
 - [文档] 明确报告投递体验边界：IM/Push 渠道以摘要+入口为主、完整研报优先 `report_url` / `external_doc_url` / HTML，避免敏感链接和完整正文误入默认通道。
 
 ## [3.17.1] - 2026-05-16
