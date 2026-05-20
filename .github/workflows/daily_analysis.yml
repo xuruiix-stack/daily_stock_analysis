@@ -494,3 +494,10 @@ jobs:
           echo "Chat ID: $TELEGRAM_CHAT_ID"
           curl -s "https://api.telegram.org/bot${TELEGRAM_BOT_TOKEN}/sendMessage"             -d "chat_id=$TELEGRAM_CHAT_ID"             -d "text=🔔 GitHub Actions 测试 - Run #${{ github.run_number }}"
 
+
+      - name: 测试 Telegram Bot
+        run: |
+          echo "Bot Token: ${TELEGRAM_BOT_TOKEN:0:10}..."
+          echo "Chat ID: $TELEGRAM_CHAT_ID"
+          curl -s "https://api.telegram.org/bot${TELEGRAM_BOT_TOKEN}/sendMessage"             -d "chat_id=$TELEGRAM_CHAT_ID"             -d "text=🔔 GitHub Actions 测试 - Run #${{ github.run_number }}"
+
