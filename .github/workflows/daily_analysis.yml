@@ -486,18 +486,4 @@ jobs:
           if [ -f "logs/stock_analysis_$(date +%Y%m%d).log" ]; then
             echo "📜 最近日志（最后 30 行）:"
             tail -30 logs/stock_analysis_*.log 2>/dev/null || echo "无日志"
-          fi
-
-      - name: 测试 Telegram Bot
-        run: |
-          echo "Bot Token: ${TELEGRAM_BOT_TOKEN:0:10}..."
-          echo "Chat ID: $TELEGRAM_CHAT_ID"
-          curl -s "https://api.telegram.org/bot${TELEGRAM_BOT_TOKEN}/sendMessage"             -d "chat_id=$TELEGRAM_CHAT_ID"             -d "text=🔔 GitHub Actions 测试 - Run #${{ github.run_number }}"
-
-
-      - name: 测试 Telegram Bot
-        run: |
-          echo "Bot Token: ${TELEGRAM_BOT_TOKEN:0:10}..."
-          echo "Chat ID: $TELEGRAM_CHAT_ID"
-          curl -s "https://api.telegram.org/bot${TELEGRAM_BOT_TOKEN}/sendMessage"             -d "chat_id=$TELEGRAM_CHAT_ID"             -d "text=🔔 GitHub Actions 测试 - Run #${{ github.run_number }}"
 
